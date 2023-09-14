@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="onName">
+        <p>input name</p>
+        <input type="text" id="name">
+        <span id="err"></span>
+        <button onclick="handleJoin()">Submit</button>
+
+    </div>
+
+    <div id="chat" class="hidden">
+        <div>
+            <p>name: <span id="setName"></span></p>
+            <ul id="messages"></ul>
+        </div>
+    
+        <div>
+            <input type="text" id="message">
+            <span id="errChat"></span>
+            <button onclick="handleSubmitNewRequest()">Submit</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    <script src="./chat-socket.js"></script>
+</body>
+</html>
